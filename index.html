@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>EGGS - RPG Master Auxiliar</title>
+	<meta charset="utf-8">
+	<script src="js-files.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164525737-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164525737-1');
+</script>
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body class="body" style="font-family: Montserrat">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+	<script>
+function background() {
+  //document.body.style.backgroundColor = "#f3f3f3";
+	var image = 'images/eggs2.png';
+	image.width = 200+'px';
+	
+var	y = Math.floor(Math.random()*10);
+ document.body.style.backgroundImage = "url('"+image+"')";
+
+}
+	var tormenta = document.getElementById("check_tor");
+	var dungeons = document.getElementById("check_d&d");
+
+
+
+window.onload = background();
+</script>
+			
+
+	<nav class="nav_tabs">
+		<ul>
+				
+
+
+			<li style="">
+				<input type="radio" id="tab2" class="rd_tab" name="tabs">
+					<label for="tab2" class="tab_label" style="font-size: 15px; padding-top: 25px;">COMBATE</label>
+				<div class="tab-content">
+					<div class="combat_container" id="combat_div">
+					
+					</div>
+					<div class="combat_end" onclick="combat_xp()"><h3>Fim do Combate<h3></div>
+			<div class="turno" id="turno_div"> <h3>Turno:<h3></div>
+					<div class="input_container">
+
+						<div class="input_div" style="margin-top: 10px; ">
+							<h2 style="color: white; width: 100%;background-color: #4B0082;">Jogadores<h2>
+							<label for="player_name">Nome:</label>
+								<input type="text" id="player_name" name="enemy_name" style="width:  200px;"><br>
+							<label for="player_ini">HP: </label>
+								<input type="text" id="player_hp" name="player_hp" style="width: 28px;" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+							<label for="player_ini">CA: </label>
+								<input type="text" id="player_ca" name="player_hp" style="width: 28px;" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+							<label for="player_ini">Iniciativa:</label>
+								<input type="text" id="player_ini" name="player_ini" style="width: 28px;" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+							<div class="addbutton" onclick="add_player()">Add</div><br>
+						</div>
+
+						<div class="input_div" style="">
+							<h2 style="color: white; width: 100%;background-color: #4B0082;">Inimigos<h2>
+							<label for="fname">Nome: </label>
+								<input type="text" id="enemy_name" name="enemy_name" style="width: 200px;"><br>
+							<label for="lname">HP:</label>
+								<input type="text" id="enemy_hp" name="enemy_ini" style="width: 28px;" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+							<label for="lname">CA:</label>
+								<input type="text" id="enemy_ca" name="enemy_ini" style="width: 28px;" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+							<label for="lname">Mod. Iniciativa:</label>
+								<input type="text" id="enemy_ini" name="enemy_ini" style="width: 28px;" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+							<div class="addbutton" onclick="add_enemy()">Add</div>
+						</div>
+					
+						<div class="input_div" style=";">
+							<h2 style="color: white; width: 100%;background-color: #4B0082;">Ajudantes<h2>
+							<label for="pet_name">Nome:</label>
+								<input type="text" id="pet_name" name="enemy_name" style="width: 200px;"><br>
+							<label for="player_ini">HP: </label>
+								<input type="text" id="pet_hp" name="player_hp" style="width: 28px;" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+							<label for="player_ini">CA: </label>
+								<input type="text" id="pet_ca" name="player_hp" style="width: 28px;" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+							<label for="pet_ini">Iniciativa:</label>
+								<input type="text" id="pet_ini" name="player_ini" style="width: 28px;" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+							<div class="addbutton" onclick="add_pet()">Add</div>
+						</div>
+					</div>
+						
+					
+					<div>
+						<p style="background-color: #4B0082; font-size: 20px; text-align: center;"><b>FEITO COM <3 POR UM BANDO DE NERDS</b></p>
+					</div>
+					 
+				</div>
+					
+					
+						<li style="">
+				<input type="radio" id="tab3" class="rd_tab" name="tabs" checked>
+				<label for="tab3" class="tab_label" style="font-size: 40px; width: 350px; height: 51px;"><b>EnGaGe System</b></label>
+				<div class="tab-content2">
+					<br><br>
+						<p style="text-align: center; font-size: 100px; color: white;"><b>BEM VINDO!</b></p>
+						<img src="./images/wall3.jpg" style="width: 100%">
+						<p style="color: #4B0082 ;font-size: 50px; padding-left: 75px; text-align: center;" class="borda"><b>O que é o EnGaGe System?</b></p>
+					<p style="color: white; font-size: 35px; padding-left: 50px; padding-right: 50px;"><b>EnGaGe System</b>(ou <b>EGGS</b>) é uma ferramenta feita para mestres de RPG de mesa que visam ganhar tempo durante os combates
+					   (que sempre demoraram um pouquinho mais que o necessário), de forma prática, rápida e intuitiva. Basta acessar e utilizar.<p>
+					   	<br><br><br><br>
+					   	<p style="background-color: #4B0082; font-size: 20px; text-align: center;"><b>FEITO COM <3 POR UM BANDO DE NERDS</b></p>
+
+					</div>
+				</div>
+			</li>
+
+			<li style="">
+				<div class="tab-container">
+				<input type="radio" name="tabs" class="rd_tab" id="tab1">
+				<label style="font-size: 15px;padding-top: 25px;" for="tab1" class="tab_label" style="">SOBRE</label>
+				<div class="tab-content3" id="conf_div">
+					<div class="text-container">
+					<h2>Funcionalidades:</h2>
+					<p>&nbsp;&nbsp;&nbsp;Até o presente momento, o EGGS é capaz de:</p>
+						<ol>
+							<li>Adicionar jogadores, inimigos e ajudantes(como o pet do druida e coisas desse tipo) na fila de combate</li><br>
+							<li>Ordenar a fila do combate por ordem decrescente de iniciativa de forma automática</li><br>
+							<li>Monitorar o HP dos combatentes por meio das barras interativas de HP</li><br>
+							<li>Indicar de quem é a vez na ordem do combate</li><br>
+							<li>Rolar automaticamente a iniciativa dos inimigos</li>
+							<li>Contar turnos(ainda em testes)</li><br>
+						</ol>
+						<br>
+					<h2>Planos futuros:</h2>
+						<ol>
+							<li>Implementar um sistema de condições(como atordoado ou envenenado)</li><br>
+							<li>Tornar a ferramenta nativa para smartphones e desktops</li><br>
+						</ol>
+						<br>
+					<h2>Bugs Conhecidos:</h2>
+					<p>&nbsp;&nbsp;&nbsp;Até o momento não tenho conhecimento de nenhum bug, o único problema que ocorre é quando eu atualizo o programa
+					mas continua exibindo a versão antiga aqui no site. Pra resolver é simples, basta limpar o cache do seu navegador.</p>
+					<br>
+					<p>&nbsp;&nbsp;&nbsp;Se você ver algum bug, entre em contato comigo.</p>
+					<br>
+					<h2>Sugestões:</h2>
+						<p>&nbsp;&nbsp;&nbsp;Caso possuam alguma sugestão, me envie um email, ou fale comigo nas redes sociais:</p>
+							<ol>
+								<li>email: gabriel191fernandes@live.com</li><br>
+								<li>twitter: <a href="https://twitter.com/gabrielfrnds22">@gabrielfrnds22</a></li><br>
+								<li>instagram: <a href="https://www.instagram.com/gabriel22.exe/">@gabriel22.exe</a></li><br>
+							</ol><br>
+					<h2>Agradecimentos:</h2>
+						<p>&nbsp;&nbsp;&nbsp;Gostaria de agradecer todos os que me mandaram ideias e sugestões, mas gostaria de agradecer em especial para aqueles que mais contribuiram para o projeto:</p>
+						<p>-Meu grande amigo Carlos Felipe(<a href="https://www.instagram.com/ka.sensei/">@ka.sensei</a>), que fez os ícones na aba "COMBATE".</p>
+						<p>-Ao Tiago Ribeiro Miranda(<a href="https://www.instagram.com/tmirandavm/">@tmirandavm</a>), que desenvolveu a arte conceitual que foi fundamental para o novo visual do site.</p>
+						<br><br><br><br>
+					   	
+					   	</div>
+					   	<p style="background-color: #4B0082; font-size: 20px; text-align: center; color: black;"><b>FEITO COM <3 POR UM BANDO DE NERDS</b></p>
+					</div>
+				</div>
+				
+			</lis		</ul>
+	</nav>
+	</div>
+</body>
+</html>
